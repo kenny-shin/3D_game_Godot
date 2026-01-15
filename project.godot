@@ -14,6 +14,7 @@ config/name="3D_game_Godot"
 run/main_scene="uid://b4yygjmufinp4"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="uid://b4yygjmufinp4"
 
 [input]
 

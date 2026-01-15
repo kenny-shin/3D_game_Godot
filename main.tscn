@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4yygjmufinp4"]
+[gd_scene load_steps=9 format=3 uid="uid://b4yygjmufinp4"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c1q3nckfse8pr" path="res://models/barrel.glb" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b3s1qgxfbttbm" path="res://models/chest_gold.glb" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://vrhe08unkv36" path="res://scenes/chest.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cm2goxd8lv7jf" path="res://scenes/barrel.tscn" id="5_7mycd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -72,3 +76,15 @@ input_right = "move_right"
 input_forward = "move_up"
 input_back = "move_down"
 input_jump = "jump"
+
+[node name="barrel" parent="." instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.876755, 0.52584743, -2.189446)
+
+[node name="chest_gold2" parent="." instance=ExtResource("3_1bvp3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.994798, 0.5626481, -0.8290949)
+
+[node name="chest" parent="." instance=ExtResource("4_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8386927, 0.627359, -3.164975)
+
+[node name="barrel2" parent="." instance=ExtResource("5_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.396548, 0.53452665, -2.0136049)
