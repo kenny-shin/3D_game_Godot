@@ -1,16 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://vrhe08unkv36"]
+[gd_scene load_steps=3 format=3 uid="uid://c6q6shtuvraob"]
 
-[ext_resource type="PackedScene" uid="uid://b3s1qgxfbttbm" path="res://models/chest_gold.glb" id="1_oii8l"]
+[ext_resource type="PackedScene" uid="uid://b3s1qgxfbttbm" path="res://models/gold_chest/chest_gold.glb" id="1_twpm2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sy5e1"]
 size = Vector3(0.9295654, 0.56726074, 0.7216797)
 
 [node name="chest" type="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2612226, 0.08060384, -0.7391856)
 
-[node name="chest_gold2" parent="." instance=ExtResource("1_oii8l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2612226, -0.08060384, 0.7391856)
+[node name="chest_gold2" parent="." instance=ExtResource("1_twpm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019194186, -0.08060384, 0.092965126)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2686079, 0.2557609, 0.73479104)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018597603, 0.2557609, 0.102368295)
 shape = SubResource("BoxShape3D_sy5e1")
