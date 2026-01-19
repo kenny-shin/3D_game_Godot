@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4yygjmufinp4"]
+[gd_scene load_steps=15 format=3 uid="uid://b4yygjmufinp4"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://xc6tdpgn0xra" path="res://scenes/wall.tscn" id="4_272bh"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cm2goxd8lv7jf" path="res://scenes/barrel.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b606cy6v0mdc7" path="res://scenes/floor_wood.tscn" id="6_kek77"]
 [ext_resource type="PackedScene" uid="uid://tumodbqfa5qk" path="res://scenes/ceiling.tscn" id="7_4c57u"]
+[ext_resource type="PackedScene" uid="uid://7bes8pc5aq4m" path="res://scenes/coin_stack.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://ctjmpixx2jadp" path="res://scenes/candle.tscn" id="9_efxa6"]
+[ext_resource type="PackedScene" uid="uid://csvvxemytj6i" path="res://scenes/wall_doorway.tscn" id="10_dg77c"]
+[ext_resource type="PackedScene" uid="uid://d3uqi8f87tpp" path="res://scenes/keyring.tscn" id="11_ycdy4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -72,7 +76,7 @@ operation = 2
 size = Vector3(1.2972412, 2.058609, 1.4614258)
 
 [node name="ProtoController" parent="." instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6471155, 0.9388404, -2.0993516)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6471155, 0.9388404, -1.4312279)
 input_left = "move_left"
 input_right = "move_right"
 input_forward = "move_up"
@@ -80,10 +84,10 @@ input_back = "move_down"
 input_jump = "jump"
 
 [node name="chest" parent="." instance=ExtResource("4_lquwl")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.1553192, 0.7401639, 2.206696)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.1553192, 0.7401639, 1.3783853)
 
 [node name="barrel2" parent="." instance=ExtResource("5_7mycd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9055643, 0.65114796, 2.331436)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014015079, 0.65114796, -0.38830754)
 
 [node name="wall" parent="." instance=ExtResource("4_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7616792, 0.5640851, 3.2820954)
@@ -135,3 +139,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8609214, 4.0607877, 0.84462
 
 [node name="ceiling3" parent="." instance=ExtResource("7_4c57u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8610666, 4.0671277, -1.1604301)
+
+[node name="barrel3" parent="." instance=ExtResource("5_7mycd")]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, 3.4250405, 1.0033412, 2.757861)
+
+[node name="barrel4" parent="barrel3" instance=ExtResource("5_7mycd")]
+transform = Transform3D(1, 0, 0, 3.5527137e-15, 1, 0, -1.6420278e-15, 0, 1, -0.013752103, 0.00017142296, -0.71688604)
+
+[node name="barrel5" parent="barrel3" instance=ExtResource("5_7mycd")]
+transform = Transform3D(0.99999994, -9.92106e-10, -2.1175824e-22, 9.920953e-10, 0.9999999, 0, 9.059478e-15, 3.5527137e-15, 0.99999994, 0.6057737, -4.339218e-05, -0.38691497)
+
+[node name="coin_stack4" parent="." instance=ExtResource("8_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 0.7866947, 0, 0, 0, 0.7205157, 0.35360146, 0.71344155, 2.2097824)
+
+[node name="coin_stack" parent="." instance=ExtResource("8_5vw27")]
+transform = Transform3D(0.2213527, 0, 0.9720881, 0, 0.5180077, 0, -0.91713315, 0, 0.23461622, -1.8291886, 0.597401, 2.5816524)
+
+[node name="coin_stack2" parent="coin_stack" instance=ExtResource("8_5vw27")]
+transform = Transform3D(-1.0598677, 0, 0.010562733, 0, 1.9304732, 0, -0.009965584, 0, -0.99995035, -0.08665824, 0.24000108, -0.52953696)
+
+[node name="candle2" parent="." instance=ExtResource("9_efxa6")]
+transform = Transform3D(0.027086705, 0, 0.7995017, 0, 0.73148954, 0, -0.62767696, 0, 0.034501612, -2.5365841, 0.6000001, -2.6621182)
+
+[node name="wall_doorway" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(0.6614424, 0, 0, 0, 0.75840163, 0, 0, 0, 0.81172526, 2.12654, 0.6457448, -2.9195929)
+
+[node name="keyring" parent="." instance=ExtResource("11_ycdy4")]
+transform = Transform3D(-0.053538505, 0, -0.9985658, 0, 1, 0, 0.9985658, 0, -0.053538505, 5.3963995, 0.6528267, 1.8685526)
+
+[node name="ceiling4" parent="." instance=ExtResource("7_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4475944, 4.0721374, -1.1615591)
